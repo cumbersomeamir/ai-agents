@@ -48,7 +48,7 @@ def generate_research(questions_list):
                 {"role": "user", "content": content}
             ]
         )
-        all_text = all_text+ str(completion)
+        all_text = all_text+ str(completion.choices[0].message.content)
     return all_text
     
     

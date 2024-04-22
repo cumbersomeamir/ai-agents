@@ -59,7 +59,7 @@ def export_to_docx(text, prompt, filename):
                     p.alignment = WD_PARAGRAPH_ALIGNMENT.JUSTIFY
     doc.save(filename)
 
-@app.route('/export', methods=['GET'])
+@app.route('/export', methods=['POST'])
 def export_document():
     prompt = request.args.get('prompt')
     if not prompt:

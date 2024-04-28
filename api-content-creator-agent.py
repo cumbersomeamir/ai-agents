@@ -16,7 +16,7 @@ def generate_images(prompt):
     response = client.images.generate(
         model="dall-e-2",
         prompt=prompt,
-        n=1,
+        n=5,
         size="1024x1024"
     )
     

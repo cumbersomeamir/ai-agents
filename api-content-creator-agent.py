@@ -11,9 +11,11 @@ if not api_key:
 #Initialising openai client
 client = OpenAI()
 
-client.images.generate(
+response = client.images.generate(
   model="dall-e-3",
   prompt="A cute baby sea otter",
   n=1,
   size="1024x1024"
 )
+
+print(response)

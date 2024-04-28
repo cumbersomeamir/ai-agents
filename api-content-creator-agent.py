@@ -11,11 +11,23 @@ if not api_key:
 #Initialising openai client
 client = OpenAI()
 
-response = client.images.generate(
-  model="dall-e-3",
-  prompt="A cute baby sea otter",
-  n=1,
-  size="1024x1024"
-)
+def generate_images(prompt):
+    response = client.images.generate(
+      model="dall-e-2",
+      prompt= prompt,
+      n=1,
+      size="1024x1024"
+    )
+    
+    images = []
+    
+    #Collect all the urls from the response
+    for image in response.data:
+        images.append(image.url)
+    
+    print("All the images are: " , images)
+    return images
 
-print(response)
+
+all_images = generate_images("A kuala skydiving")
+

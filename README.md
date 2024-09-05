@@ -11,4 +11,4 @@
 cURLS:
 
 
-Content Creater Agent - curl -X POST http://34.66.196.174:5005/generate -H "Content-Type: application/json" -d "{\"prompt\":\"A koala skydiving\"}"
+Content Creater Agent - curl -X POST http://localhost:5005/generate -H "Content-Type: application/json" -d "{\"prompt\":\"A koala skydiving\"}"
